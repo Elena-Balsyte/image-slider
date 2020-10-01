@@ -22,8 +22,8 @@
      <h2>Simple Slideshow</h2>
      <!-- Slideshow container -->
      <div class="carousel-container">
-      <i id="prevBtn" class="fas fa-arrow-circle-left"></i>
-      <i id="nextBtn" class="fas fa-arrow-circle-right"></i>
+      <i id="prevBtn" class="fas fa-arrow-circle-left cursor"></i>
+      <i id="nextBtn" class="fas fa-arrow-circle-right cursor"></i>
      <!-- Full-width images with number and caption text -->
       <div class="carousel-slide">
         <img id ="lastClone" src="img/tattoo-2894318_1920.jpg" alt = "Image source: Unsplash.com">
@@ -44,19 +44,70 @@
       <h2>Image modal (dialog box) </h2>
       <p>Click on the image to expand it</p>
       <div class="grid-row">
-        <img id="myImg1" src="img/ksenia-makagonova-m8kr2dia60Y-unsplash.jpg" alt="Tattoo 'Love never fails'">
-      <img id="myImg2" src="img/mariano-nocetti-5EYvjemMFms-unsplash.jpg" alt="Mandala tattoo on the back">
-        <img id="myImg3" src="img/mor-shani-rLF1KtRjg7Y-unsplash.jpg" alt="Tattoo on the back">
+        <img id="myImg1" class="cursor" src="img/ksenia-makagonova-m8kr2dia60Y-unsplash.jpg" alt="Tattoo 'Love never fails'">
+      <img id="myImg2" class="cursor" src="img/mariano-nocetti-5EYvjemMFms-unsplash.jpg" alt="Mandala tattoo on the back">
+        <img id="myImg3" class="cursor" src="img/mor-shani-rLF1KtRjg7Y-unsplash.jpg" alt="Tattoo on the back">
       </div>
       <!-- The Modal------------->
       <div id="myModal" class="modal">
-        <span class="close">&times;</span>
+        <span class="close cursor">&times;</span>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
       </div>
     </div>
   </section>
+  <section id="slideshow-gallery">
+    <div class="content-wrapper-col">
+      <h2>Slideshow gallery</h2>
+      <div class="container">
 
+        <div class="mySlides">
+          <div class="numbertext">1/6</div>
+          <img src="img/simon-wilkes-uH5OXBhnSNg-unsplash.jpg">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">2/6</div>
+          <img src="img/samuel-austin-S_TIOyYuiJI-unsplash.jpg">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">3/6</div>
+          <img src="img/ksenia-makagonova-V-TIPBoC_2M-unsplash.jpg">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">4/6</div>
+          <img src="img/gratisography-268H.jpg">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5/6</div>
+          <img src="img/ashley-batz-betmVWGYcLY-unsplash.jpg">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6/6</div>
+          <img src="img/jared-rice-8w7b4SdhOgw-unsplash.jpg">
+        </div>
+
+        <a class="prev cursor" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next cursor"onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption-text"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="thumbnail-images">
+          <img id="slide1" onclick="currentSlide(1)" class="demo cursor" src="img/simon-wilkes-uH5OXBhnSNg-unsplash.jpg" alt="Sunrise">
+          <img id="slide2" onclick="currentSlide(2)" class="demo cursor" src="img/samuel-austin-S_TIOyYuiJI-unsplash.jpg" alt="Crystals and buddha">
+          <img id="slide3" onclick="currentSlide(3)" class="demo cursor" src="img/ksenia-makagonova-V-TIPBoC_2M-unsplash.jpg" alt="Meditation">
+          <img id="slide4" onclick="currentSlide(4)" class="demo cursor" src="img/gratisography-268H.jpg" alt="Joy">
+          <img id="slide5" onclick="currentSlide(5)" class="demo cursor" src="img/ashley-batz-betmVWGYcLY-unsplash.jpg" alt="Energetical labyrinth">
+          <img id="slide6" onclick="currentSlide(6)" class="demo cursor" src="img/lesly-juarez-DFtjXYd5Pto-unsplash.jpg" alt="Mindfulness">
+
+        </div><!-- .thumbnail-images ends here -->
+
+      </div><!-- .container ends here -->
+
+    </div><!-- content-wrapper-col ends here -->
+  </section>
   </main>
   <footer>
   <p>Developer Elena Balsyte | <a href="https://developer-elena.co.uk/index.html" target='_blank'>www.developer-elena.co.uk</a></p>

@@ -36,18 +36,23 @@ body {
 }
 
 header {
-  background: linear-gradient(to bottom left, rgba(1, 18, 51, 0.7), rgba(6, 107, 64, 0.7));
+  background-color: #2a3c44;
   color: #FFCF4D;
   text-align: center;
   width: 100%;
   padding: 25px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.8);
 }
 
-main {
-  width: 90%;
+main, section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+section {
+  padding-bottom: 75px;
 }
 
 .content-wrapper-col {
@@ -61,11 +66,17 @@ h1, h2, h3 {
   padding: 25px 0;
 }
 
+h2 {
+  color: #223138;
+  text-transform: uppercase;
+}
+
 p {
   padding: 10px 0px 25px 0px;
 }
 
 /****************************Simple slider section**********************/
+
 .carousel-container {
   width: 60%;
   margin: auto;
@@ -95,7 +106,6 @@ img {
   font-size: 3em;
   color: #4e586e;
   opacity: 0.9;
-  cursor: pointer;
 }
 
 #nextBtn {
@@ -106,7 +116,6 @@ img {
   font-size: 3em;
   color: #4e586e;
   opacity: 0.9;
-  cursor: pointer;
 }
 
 /**********************************Image modal section*******************/
@@ -119,7 +128,6 @@ img {
 #myImg1, #myImg2, #myImg3 {
   width: 100%;
   max-width: 300px;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -195,15 +203,91 @@ img {
   cursor: pointer;
 }
 
+/******************************Slideshow gallery section***********************/
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  max-width: 600px;
+  border: 1px solid #4e586e;
+}
 
+.mySlides {
+  display: none;
+  background-color: #222;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 14px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+div.thumbnail-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 /***********************************Footer******************************/
 
 footer {
-  padding: 25px;
+  padding: 10px;
   background-color: #066b40;
   opacity: 0.95;
   width: 100%;
   color: #FFCF4D;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.8);
 }
 
 a {
