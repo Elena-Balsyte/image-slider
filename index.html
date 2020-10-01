@@ -14,13 +14,12 @@
 </head>
 <body>
   <header>
-  <h1>JavaScript slideshows</h1>
+  <h1>Images, slideshows and galleries</h1>
   </header>
   <main>
   <section id = "simple-slider">
     <div class="content-wrapper-col">
      <h2>Simple Slideshow</h2>
-
      <!-- Slideshow container -->
      <div class="carousel-container">
       <i id="prevBtn" class="fas fa-arrow-circle-left"></i>
@@ -37,8 +36,27 @@
       </div>
      <!-- Next and previous buttons -->
    </div>
-
+ </div>
   </section>
+
+  <section id="modal-pictures">
+    <div class="content-wrapper-col">
+      <h2>Image modal (dialog box) </h2>
+      <p>Click on the image to expand it</p>
+      <div class="grid-row">
+        <img id="myImg1" src="img/ksenia-makagonova-m8kr2dia60Y-unsplash.jpg" alt="Tattoo 'Love never fails'">
+      <img id="myImg2" src="img/mariano-nocetti-5EYvjemMFms-unsplash.jpg" alt="Mandala tattoo on the back">
+        <img id="myImg3" src="img/mor-shani-rLF1KtRjg7Y-unsplash.jpg" alt="Tattoo on the back">
+      </div>
+      <!-- The Modal------------->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+    </div>
+  </section>
+
   </main>
   <footer>
   <p>Developer Elena Balsyte | <a href="https://developer-elena.co.uk/index.html" target='_blank'>www.developer-elena.co.uk</a></p>

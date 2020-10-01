@@ -1,5 +1,5 @@
 
-
+// ---------------------Simple slideshow---------------------------//
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselImages = document.querySelectorAll('.carousel-slide img');
 
@@ -40,3 +40,34 @@ carouselSlide.addEventListener('transitionend', ()=>{
     carouselSlide.style.transform = "translateX('+(-size*counter)+'px)";
   };
 });
+
+//-------------------------------Image modal-------------------------//
+const myModal = document.getElementById('myModal');
+const img1 = document.getElementById('myImg1');
+const img2 = document.getElementById('myImg2');
+const img3 = document.getElementById('myImg3');
+const modalImg = document.getElementById('img01');
+const caption = document.getElementById('caption');
+const close = document.getElementsByClassName('close')[0];
+
+ img1.onclick = function(){
+   myModal.style.display = "block";
+   modalImg.src = this.src;
+   caption.innerHTML = this.alt;
+ };
+
+ img2.onclick = function(){
+   myModal.style.display = "block";
+   modalImg.src = this.src;
+   caption.innerHTML = this.alt;
+ };
+
+ img3.onclick = function(){
+   myModal.style.display = "block";
+   modalImg.src = this.src;
+   caption.innerHTML = this.alt;
+ };
+
+ close.onclick = function(){
+   myModal.style.display = "none";
+ };
