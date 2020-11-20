@@ -73,7 +73,9 @@ $(document).ready(function () {
   };
 
   //------------------------Slideshow gallery-------------------------//
-  var slideIndex = 1;
+  const galleryNext = document.getElementById("next");
+  const galleryPrev = document.getElementById("prev");
+  let slideIndex = 1;
   showSlides(slideIndex);
 
   // Next/previous controls
@@ -87,10 +89,10 @@ $(document).ready(function () {
   }
 
   function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption-text");
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("demo");
+    const captionText = document.getElementById("caption-text");
     if (n > slides.length) {
       slideIndex = 1;
     }
@@ -107,4 +109,11 @@ $(document).ready(function () {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
   }
+
+  galleryNext.onclick = function () {
+    plusSlides(1);
+  };
+  galleryPrev.onclick = function () {
+    plusSlides(-1);
+  };
 });
